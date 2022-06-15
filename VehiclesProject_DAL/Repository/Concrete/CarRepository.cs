@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using VehiclesProject_DAL.Repository.Abstract;
 using VehiclesProject_EL;
+using System.Linq;
 
 namespace VehiclesProject_DAL.Repository.Concrete
 {
@@ -23,9 +24,10 @@ namespace VehiclesProject_DAL.Repository.Concrete
             await _context.SaveChangesAsync();
         }
 
-        public Task<IList<Car>> GetAll(Color color)
+        public async Task<IList<Car>> GetAll(Color color)
         {
-            var cars= await _context.Cars.
+            var cars = await _context.Cars.FirstOrDefaultAsync(p => p.ColorId == color.Id);
+            return cars.;
         }
 
         public Task<bool> TurnOn(int id)
