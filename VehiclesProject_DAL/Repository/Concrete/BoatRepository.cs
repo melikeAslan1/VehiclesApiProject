@@ -25,6 +25,11 @@ namespace VehiclesProject_DAL.Repository.Concrete
             throw new NotImplementedException();
         }
 
+        public Task<IList<Boat>> GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public Task<bool> TurnOn(int id)
         {
             throw new NotImplementedException();

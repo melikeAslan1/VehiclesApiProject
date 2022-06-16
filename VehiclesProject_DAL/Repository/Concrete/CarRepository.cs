@@ -26,8 +26,17 @@ namespace VehiclesProject_DAL.Repository.Concrete
 
         public async Task<IList<Car>> GetAll(Color color)
         {
-            var cars = await _context.Cars.FirstOrDefaultAsync(p => p.ColorId == color.Id);
-            return cars.;
+            //var cars = await _context.Cars.FirstOrDefaultAsync(p => p.ColorId == color.Id)
+            //return cars.;
+
+
+            throw new NotImplementedException();
+        }
+
+        public async Task<IList<Car>> GetAll()
+        {
+            var cars = await _context.Cars.ToListAsync();
+            return cars;
         }
 
         public Task<bool> TurnOn(int id)
