@@ -39,5 +39,13 @@ namespace VehiclesProject_Api.Controllers
 
             return Ok(cars);
         }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetAll(int id)
+        {
+            var cars = await _carService.GetAll(id);
+
+            return Ok(cars);
+        }
     }
 }

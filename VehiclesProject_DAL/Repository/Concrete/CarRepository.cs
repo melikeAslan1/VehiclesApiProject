@@ -24,13 +24,13 @@ namespace VehiclesProject_DAL.Repository.Concrete
             await _context.SaveChangesAsync();
         }
 
-        public async Task<IList<Car>> GetAll(Color color)
+        public async Task<IList<Car>> GetAll(int id)
         {
-            //var cars = await _context.Cars.FirstOrDefaultAsync(p => p.ColorId == color.Id)
-            //return cars.;
+            var cars = await _context.Cars.FirstOrDefaultAsync(p => p.ColorId == id);
+            return (IList<Car>)cars;
 
 
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
 
         public async Task<IList<Car>> GetAll()

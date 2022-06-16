@@ -16,7 +16,7 @@ namespace VehiclesProject_BLL.Concrete
         {
             _carRepository = carRepository;
         }
-        public Task<IList<Boat>> GetAll(string color)
+        public Task<IList<Boat>> GetAll(int id)
         {
             throw new NotImplementedException();
         }

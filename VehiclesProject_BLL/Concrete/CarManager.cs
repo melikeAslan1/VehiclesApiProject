@@ -22,9 +22,9 @@ namespace VehiclesProject_BLL.Concrete
             await _carRepository.Delete(id);
         }
 
-        public Task<IList<Car>> GetAll(string color)
+        public Task<IList<Car>> GetAll(int id)
         {
-            throw new NotImplementedException();
+            return _carRepository.GetAll(id);
         }
 
         public Task<IList<Car>> GetAll()

@@ -20,7 +20,7 @@ namespace VehiclesProject_DAL.Repository.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<IList<Boat>> GetAll(Color color)
+        public Task<IList<Boat>> GetAll(int id)
         {
             throw new NotImplementedException();
         }

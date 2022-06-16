@@ -8,7 +8,7 @@ namespace VehiclesProject_DAL.Repository.Abstract
 {
     public interface IRepository<T> where T : Vehicle, new()
     {
-        Task<IList<T>> GetAll(Color color);
+        Task<IList<T>> GetAll(int id);
 
         Task<IList<T>> GetAll();
         Task Delete(int id);

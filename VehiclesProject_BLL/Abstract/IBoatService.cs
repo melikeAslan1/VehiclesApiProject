@@ -8,6 +8,6 @@ namespace VehiclesProject_BLL.Abstract
 {
     public interface IBoatService
     {
-        Task<IList<Boat>> GetAll(string color);
+        Task<IList<Boat>> GetAll(int id);
     }
 }
