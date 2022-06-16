@@ -11,5 +11,9 @@ namespace VehiclesProject_Api.Controllers
     [ApiController]
     public class BoatsController : ControllerBase
     {
+
+
+
+
     }
 }
