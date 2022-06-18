@@ -10,11 +10,11 @@ namespace VehiclesProject_BLL.Concrete
 {
     public class BoatManager : IBoatService
     {
-        private IBoatRepository _carRepository;
+        private IBoatRepository _boatRepository;
 
         public BoatManager(IBoatRepository carRepository)
         {
-            _carRepository = carRepository;
+            _boatRepository = carRepository;
         }
         public Task<IList<Boat>> GetAll(int id)
         {

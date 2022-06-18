@@ -9,5 +9,6 @@ namespace VehiclesProject_BLL.Abstract
     public interface IBusService
     {
         Task<IList<Bus>> GetAll(int id);
+        Task GetAll();
     }
 }

@@ -18,5 +18,13 @@ namespace VehiclesProject_Api.Controllers
         {
             _busService = busService;
         }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var buses = await _busService.GetAll();
+
+            return Ok(buses);
+        }
     }
 }

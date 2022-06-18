@@ -10,15 +10,22 @@ namespace VehiclesProject_BLL.Concrete
 {
     public class BusManager : IBusService
     {
-        private IBusRepository _carRepository;
+        private IBusRepository _busRepository;
 
         public BusManager(IBusRepository carRepository)
         {
-            _carRepository = carRepository;
+            _busRepository = carRepository;
         }
         public Task<IList<Bus>> GetAll(int id)
         {
             throw new NotImplementedException();
+        }
+
+        public Task GetAll()
+        {
+            
+
+            return _busRepository.GetAll();
         }
     }
 }

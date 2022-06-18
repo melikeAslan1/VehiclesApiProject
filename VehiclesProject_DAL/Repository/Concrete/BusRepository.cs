@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -25,9 +26,10 @@ namespace VehiclesProject_DAL.Repository.Concrete
             throw new NotImplementedException();
         }
 
-        public Task<IList<Bus>> GetAll()
+        public async Task<IList<Bus>> GetAll()
         {
-            throw new NotImplementedException();
+            var buses = await _context.Busses.ToListAsync();
+            return buses;
         }
 
         public Task<bool> TurnOn(int id)
