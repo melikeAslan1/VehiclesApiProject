@@ -39,8 +39,18 @@ namespace VehiclesProject_DAL.Repository.Concrete
             return cars;
         }
 
-        public Task<bool> TurnOn(int id)
+        public async Task ChangeHeadlights(int id)
         {
+
+            var car = await _context.Cars.FirstOrDefaultAsync(p => p.Id == id);
+
+            if(car.Headlights.Equals(true))
+            {
+                // _context.Cars.Set
+
+                await _context.SaveChangesAsync();
+            }
+
             throw new NotImplementedException();
         }
     }

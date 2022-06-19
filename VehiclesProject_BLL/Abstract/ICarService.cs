@@ -13,6 +13,6 @@ namespace VehiclesProject_BLL.Abstract
         Task<IList<Car>> GetAll();
         Task Delete(int id);
 
-        Task<bool> TurnOn(int id);
+        Task ChangeHeadlights(int id);
     }
 }

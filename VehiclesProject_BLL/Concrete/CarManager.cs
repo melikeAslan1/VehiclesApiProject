@@ -17,6 +17,12 @@ namespace VehiclesProject_BLL.Concrete
         {
             _carRepository = carRepository;
         }
+
+        public Task ChangeHeadlights(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public async Task Delete(int id)
         {
             await _carRepository.Delete(id);
@@ -32,9 +38,6 @@ namespace VehiclesProject_BLL.Concrete
             return _carRepository.GetAll();
         }
 
-        public Task<bool> TurnOn(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

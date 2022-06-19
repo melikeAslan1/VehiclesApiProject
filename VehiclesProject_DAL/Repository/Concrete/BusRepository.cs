@@ -16,6 +16,12 @@ namespace VehiclesProject_DAL.Repository.Concrete
         {
             _context = context;
         }
+
+        public Task ChangeHeadlights(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Task Delete(int id)
         {
             throw new NotImplementedException();
@@ -32,9 +38,6 @@ namespace VehiclesProject_DAL.Repository.Concrete
             return buses;
         }
 
-        public Task<bool> TurnOn(int id)
-        {
-            throw new NotImplementedException();
-        }
+        
     }
 }

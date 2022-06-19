@@ -13,6 +13,6 @@ namespace VehiclesProject_DAL.Repository.Abstract
         Task<IList<T>> GetAll();
         Task Delete(int id);
 
-        Task<bool> TurnOn(int id);
+        Task ChangeHeadlights(int id);
     }
 }
