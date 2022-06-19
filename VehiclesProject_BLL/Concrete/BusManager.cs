@@ -21,11 +21,11 @@ namespace VehiclesProject_BLL.Concrete
             throw new NotImplementedException();
         }
 
-        public Task GetAll()
+        public Task<IList<Bus>> GetAll()
         {
-            
-
             return _busRepository.GetAll();
         }
+
+       
     }
 }
